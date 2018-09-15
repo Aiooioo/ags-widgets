@@ -17,9 +17,9 @@ All widgets are developed and tested under Chrome, the latest version.
 
 ## Reference
 
-* [ArcGIS API for JavaScript]: https://developers.arcgis.com/javascript/
-* [Widget development]: https://developers.arcgis.com/javascript/latest/guide/custom-widget/index.html
-* [TypeScript]: http://www.typescriptlang.org/
+* [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/)
+* [Widget development](https://developers.arcgis.com/javascript/latest/guide/custom-widget/index.html)
+* [TypeScript](http://www.typescriptlang.org/)
 
 ## Contribution
 
