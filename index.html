@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>Demo - ArcGIS JSAPI 4.x Widgets</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+
+  <link rel="stylesheet" href="app/SliderAnimation/css/SliderAnimation.css">
+
+  <script>
+    var href = location.href;
+    var demoLocation = href.slice(0, href.lastIndexOf("/"));
+    var dojoConfig = {
+      has: {
+        "esri-featurelayer-webgl": 1
+      },
+      packages: [{
+        name: "demo",
+        location: demoLocation + "/app"
+      }]
+    };
+  </script>
+
+  <script src="https://js.arcgis.com/4.8/init.js"></script>
+
+  <style>
+    html,
+    body,
+    #viewDiv {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "demo/SliderAnimation/SliderAnimation",
+      "dojo/domReady!"
+    ], function (
+      Map,
+      MapView,
+      SliderAnimation
+    ) {
+        var map = new Map({
+          basemap: 'osm'
+        });
+        var view = new MapView({
+          container: "viewDiv",
+          ui: {
+            components: ["zoom"]
+          },
+          map: map,
+          center: [113, 38],
+          zoom: 4,
+        });
+        var attribution = new SliderAnimation({
+          datalist: ['Stop1', 'Stop2', 'Stop3'],
+        });
+        view.ui.add(attribution, "bottom-right");
+        attribution.on('change', function (evt) {
+          console.log(evt.value);
+        });
+      });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+
+</html>

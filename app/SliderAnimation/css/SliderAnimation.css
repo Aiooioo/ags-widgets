@@ -1,0 +1,67 @@
+.esri-slider-v {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 320px;
+}
+
+.esri-slider-v__inner {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.esri-slider-v__toggle-button {
+  flex: none;
+  width: 100%;
+}
+
+.esri-slider-v__toggle-button > :nth-child(2) {
+  display: none;
+}
+
+.esri-slider-v__toggle-button.toggle > :nth-child(1) {
+  display: none;
+}
+
+.esri-slider-v__toggle-button.toggle > :nth-child(2) {
+  display: block;
+}
+
+.esri-slider-v__toggle-button.toggle .toggle-button-icon {
+  color: #cc1b1b;
+}
+
+.esri-slider-v__toggle-button .toggle-button-icon {
+  color: #1bcc1b;
+}
+
+.esri-slider-v__slider {
+  margin-top: 8px;
+  outline: none;
+  -webkit-appearance: none;
+  width: 240px;
+  transform: rotate(90deg);
+  margin-left: -80px;
+  margin-right: -80px;
+  top: 110px;
+  position: relative;
+}
+
+.esri-slider-v__slider::-webkit-slider-runnable-track {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  height: 16px;
+}
+
+.esri-slider-v__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 32px;
+  width: 32px;
+  background: #fff;
+  border: solid 1px #ddd;
+  border-radius: 10px;
+  margin-top: -9px;
+  cursor: pointer;
+}

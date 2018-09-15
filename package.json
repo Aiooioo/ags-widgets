@@ -1,0 +1,22 @@
+{
+  "name": "ags-widgets",
+  "version": "1.0.0",
+  "description": "ArcGIS JSAPI 4.x widgets using TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aiooioo/ags-widgets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aiooioo/ags-widgets/issues"
+  },
+  "homepage": "https://github.com/Aiooioo/ags-widgets#readme",
+  "devDependencies": {
+    "@types/arcgis-js-api": "^4.8.1"
+  }
+}
